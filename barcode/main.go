@@ -17,7 +17,6 @@ type array struct {
 }
 
 func barcode(arr []int) []int {
-
 	arrFinal := []int{}
 
 	arrMap := map[int]int{}

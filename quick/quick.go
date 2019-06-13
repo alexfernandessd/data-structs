@@ -18,7 +18,6 @@ func main() {
 	q.quick(0, len(q.arr)-1)
 	end := time.Since(start)
 	fmt.Println("time: ", end, "result: ", q.arr)
-
 }
 
 func (q *quick) quick(l, h int) {

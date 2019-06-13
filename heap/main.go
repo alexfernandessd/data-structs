@@ -12,6 +12,9 @@ func main() {
 
 	arr2 := heapify()
 	fmt.Println("heapify: ", arr2)
+
+	arr3 := maxHeapify()
+	fmt.Println("max heapify: ", arr3)
 }
 
 func heapify() []int {
@@ -46,6 +49,27 @@ func heapify() []int {
 				}
 
 			}
+		}
+	}
+
+	end := time.Since(start)
+
+	fmt.Println("time: ", end)
+
+	return arr
+}
+
+func maxHeapify() []int {
+	start := time.Now()
+	arr := []int{10, 20, 50, 80, 900, 1000, 5, 6}
+
+	for i := len(arr) - 1; i >= 0; i-- {
+		parent := i / 2
+
+		if parent >= 0 && arr[i] > arr[parent] {
+			auxParent := arr[parent]
+			arr[parent] = arr[i]
+			arr[i] = auxParent
 		}
 	}
 

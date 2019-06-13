@@ -12,7 +12,6 @@ func main() {
 }
 
 func bubble(arr []int) []int {
-
 	for i := range arr {
 		for j := i + 1; j < len(arr); j++ {
 			if arr[i] > arr[j] {
