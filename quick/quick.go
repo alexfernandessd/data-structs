@@ -21,7 +21,6 @@ func main() {
 }
 
 func (q *quick) quick(l, h int) {
-	fmt.Println("lh", l, h)
 	if l < h {
 		j := q.swap(l, h)
 		q.quick(l, j-1)
